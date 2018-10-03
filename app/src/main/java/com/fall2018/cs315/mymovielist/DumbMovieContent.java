@@ -25,19 +25,40 @@ public class DumbMovieContent {
     // CS315: DO THIS
     // TODO: Create five NEW movie objects here. Complete with images and URLs. DELETE the two existing movies, they are only here as an example
 
-    private static final String movie1Title = "Generic Rom Com";
-    private static final String movie1Description = "Naturally, focuses on 2 people who really shouldn’t be together. It somehow becomes mutually advantageous for them to be together, or perhaps, they are interested in each other but their romance is based on false pretenses. Because the leads generally have no charisma, they each need a zany best friend who inserts dirty jokes wherever necessary. The two leads will fall in love in an extended music montage set to the music of Sixpence None the Richer. Once they find out about the false pretenses, they will take some time apart but realize how much they care for the other. Then comes “The Chase,” which can either be in an airport (not legal anymore), in traffic or somehow on boats. \n \nYou've seen this before, but not with these two actors!";
-    private static final String movie1Year = "2015";
-    private static final String movie1Image = "genericromcom";
-    private static final String movie1Weblink = "http://showtimeshowdown.com/5-cliche-formulas-of-movie-genres/";
+    private static final String movie1Title = "The Greatest Showman";
+    private static final String movie1Description = "Celebrates the birth of show business, and tells of a visionary who rose from nothing to create a spectacle that became a worldwide sensation.";
+    private static final String movie1Year = "2017";
+    private static final String movie1Image = "greatestshow";
+    private static final String movie1Weblink = "https://www.imdb.com/title/tt1485796/";
 
-    private static final String actionTitle = "Every Action Movie Ever";
-    private static final String actionDescription = "The villain has left the hero for dead, or killed the hero’s brother, sister, parents, wife or family pets. Filled with righteous fury, the hero tools up and embarks on a bloody rampage.  \n \nIf the movie does well, we will do it again in the sequel! \n \nMaybe the villain tries to get revenge on the hero for getting revenge on the villain in this movie...";
-    private static final String actionYear = "2017";
-    private static final String actionImage = "genericaction";
-    private static final String actionWeblink = "http://www.denofgeek.com/us/movies/18824/the-5-most-common-action-movie-plots";
+    private static final String movie2Title = "To All the Boys I've Loved Before";
+    private static final String movie2Description = "A teenage girl's secret love letters are exposed and wreak havoc on her love life.";
+    private static final String movie2Year = "2018";
+    private static final String movie2Image = "boys";
+    private static final String movie2Weblink = "https://www.imdb.com/title/tt3846674/";
 
-    //here add comment
+
+    private static final String movie3Title = "High School Musical";
+    private static final String movie3Description = "A popular high school athlete and an academically gifted girl get roles in the school musical and develop a friendship that threatens East High's social order.";
+    private static final String movie3Year = "2006";
+    private static final String movie3Image = "hsm";
+    private static final String movie3Weblink = "https://www.imdb.com/title/tt0475293/";
+
+    private static final String movie4Title = "The Notebook";
+    private static final String movie4Description = "A poor yet passionate young man falls in love with a rich young woman, giving her a sense of freedom, but they are soon separated because of their social differences.";
+    private static final String movie4Year = "2004";
+    private static final String movie4Image = "notebook";
+    private static final String movie4Weblink = "https://www.imdb.com/title/tt0332280/";
+
+
+    private static final String movie5Title = "Pretty in Pink";
+    private static final String movie5Description = "A poor girl must choose between the affections of dating her childhood sweetheart or a rich but sensitive playboy.";
+    private static final String movie5Year = "1986";
+    private static final String movie5Image = "pink";
+    private static final String movie5Weblink = "https://www.imdb.com/title/tt0091790/";
+
+
+    //here add comments
 
 
     /**
@@ -45,13 +66,23 @@ public class DumbMovieContent {
      */
     public List<MovieModel> createMovieMagic () {
 
+        ITEM_MAP.clear();
+        MOVIES.clear();
+
         // make those movie objects
-        MovieModel action = new MovieModel(actionTitle, actionDescription, actionYear, actionImage, actionWeblink);
-        MovieModel romcom = new MovieModel(movie1Title, movie1Description, movie1Year, movie1Image, movie1Weblink);
+        MovieModel musical = new MovieModel(movie1Title, movie1Description, movie1Year, movie1Image, movie1Weblink);
+        MovieModel love = new MovieModel(movie2Title, movie2Description, movie2Year,movie2Image, movie2Weblink);
+        MovieModel dance = new MovieModel(movie3Title,movie3Description, movie3Year, movie3Image, movie3Weblink);
+        MovieModel romcom = new MovieModel(movie4Title, movie4Description, movie4Year, movie4Image,movie4Weblink);
+        MovieModel oldtimes = new MovieModel(movie5Title, movie5Description, movie5Year, movie5Image, movie5Weblink);
 
         // add EACH movie object to our lists and maps
-        addMovieToList(action);
+//        addMovieToList(action);
+        addMovieToList(musical);
+        addMovieToList(love);
+        addMovieToList(dance);
         addMovieToList(romcom);
+        addMovieToList(oldtimes);
 
         // no more movies to add?  Okay... return our list
         return MOVIES;

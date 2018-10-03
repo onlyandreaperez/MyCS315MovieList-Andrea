@@ -1,6 +1,7 @@
 package com.fall2018.cs315.mymovielist;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -62,6 +63,25 @@ public class MovieDetailFragment extends Fragment {
                 // CS315: DO THIS
                 // TODO: Set the image based upon the string we got stashed in getMovieImage()
 
+                if(mItem.getMovieImage() == "hsm") {
+                    thisMovieImageView.setImageResource(R.drawable.hsm);
+               }
+                if(mItem.getMovieImage() == "boys") {
+                    thisMovieImageView.setImageResource(R.drawable.boys);
+                }
+                if(mItem.getMovieImage() == "pink") {
+                    thisMovieImageView.setImageResource(R.drawable.pink);
+                }
+                if(mItem.getMovieImage() == "greatestshow") {
+                    thisMovieImageView.setImageResource(R.drawable.greatestshow);
+                }
+               if(mItem.getMovieImage() == "notebook") {
+                  thisMovieImageView.setImageResource(R.drawable.notebook);
+        }
+
+
+
+
             }
 
             FloatingActionButton fab = (FloatingActionButton) activity.findViewById(R.id.fab);
@@ -73,8 +93,12 @@ public class MovieDetailFragment extends Fragment {
                     // TODO: launch the webpage with the URL we gots back from the model... also lose the snackbar stuff
                     // TODO: hint - you need to establish a new intent and launch a new Activity
 
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
+                    Intent intent = new Intent(getActivity(),MovieWebpage.class);
+                    intent.putExtra(MovieWebpage.WEB_URL, mItem.getMovieWeblink());
+
+                    startActivity(intent);
+
+
                 }
             });
         }
@@ -93,4 +117,5 @@ public class MovieDetailFragment extends Fragment {
         return rootView;
     }
 }
+
 
