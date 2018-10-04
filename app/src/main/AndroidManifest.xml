@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fall2018.cs315.mymovielist">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <!-- Required to act as a custom watch face. -->
     <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required for complications to receive complication data and open the provider chooser. -->
@@ -36,6 +36,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MovieListActivity" />
         </activity>
+        <activity android:name=".MovieWebpage" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
